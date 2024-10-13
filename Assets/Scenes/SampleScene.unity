@@ -4056,8 +4056,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jumpForce: 5
   jumpCooldown: 0.5
-  dragonPrefab: {fileID: 0}
-  dragonSpawnPosition: {fileID: 0}
 --- !u!50 &1433278834
 Rigidbody2D:
   serializedVersion: 4
@@ -4129,7 +4127,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1435384964}
-  - component: {fileID: 1435384963}
+  - component: {fileID: 1435384965}
   m_Layer: 0
   m_Name: DragonSummonEventManager
   m_TagString: Untagged
@@ -4137,18 +4135,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1435384963
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1435384962}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4213cd5bfe41541828486cad1d866d44, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &1435384964
 Transform:
   m_ObjectHideFlags: 0
@@ -4164,6 +4150,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1435384965
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1435384962}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4213cd5bfe41541828486cad1d866d44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1456434830
 GameObject:
   m_ObjectHideFlags: 0
@@ -5744,6 +5742,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RedPipe
       objectReference: {fileID: 0}
+    - target: {fileID: 5739912177708375577, guid: afa7708834cf8426c871b8d6d4b8e3d1, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     - target: {fileID: 6522395621510732343, guid: afa7708834cf8426c871b8d6d4b8e3d1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -5783,6 +5785,42 @@ PrefabInstance:
     - target: {fileID: 6522395621510732343, guid: afa7708834cf8426c871b8d6d4b8e3d1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6910691994379127588, guid: afa7708834cf8426c871b8d6d4b8e3d1, type: 3}
+      propertyPath: m_Size.x
+      value: 1.8857918
+      objectReference: {fileID: 0}
+    - target: {fileID: 6910691994379127588, guid: afa7708834cf8426c871b8d6d4b8e3d1, type: 3}
+      propertyPath: m_Size.y
+      value: 8.406334
+      objectReference: {fileID: 0}
+    - target: {fileID: 6910691994379127588, guid: afa7708834cf8426c871b8d6d4b8e3d1, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.04678583
+      objectReference: {fileID: 0}
+    - target: {fileID: 6910691994379127588, guid: afa7708834cf8426c871b8d6d4b8e3d1, type: 3}
+      propertyPath: m_Offset.y
+      value: 3.6820898
+      objectReference: {fileID: 0}
+    - target: {fileID: 7089380867753938415, guid: afa7708834cf8426c871b8d6d4b8e3d1, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183853227997162537, guid: afa7708834cf8426c871b8d6d4b8e3d1, type: 3}
+      propertyPath: m_Size.x
+      value: 1.8140428
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183853227997162537, guid: afa7708834cf8426c871b8d6d4b8e3d1, type: 3}
+      propertyPath: m_Size.y
+      value: 8.399358
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183853227997162537, guid: afa7708834cf8426c871b8d6d4b8e3d1, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.017937303
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183853227997162537, guid: afa7708834cf8426c871b8d6d4b8e3d1, type: 3}
+      propertyPath: m_Offset.y
+      value: -7.72444
       objectReference: {fileID: 0}
     - target: {fileID: 8454452018046033364, guid: afa7708834cf8426c871b8d6d4b8e3d1, type: 3}
       propertyPath: m_LocalPosition.x

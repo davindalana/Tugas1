@@ -3,10 +3,11 @@ using UnityEngine.Events;
 
 public class DragonSummonEvent : MonoBehaviour
 {
-    public static UnityEvent onDragonSummon; // Define static event for dragon summon
+    public static UnityEvent onDragonSummon; // Define static event
 
-    private void Start()
+    private void Awake()
     {
+        // Initialize the event if it's null
         if (onDragonSummon == null)
         {
             onDragonSummon = new UnityEvent();

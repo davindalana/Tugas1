@@ -1,6 +1,5 @@
 using System.Collections;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class BirdController : MonoBehaviour
 {
@@ -9,8 +8,6 @@ public class BirdController : MonoBehaviour
     private bool canJump = true;
     private Rigidbody2D rb;
     private int score = 0;
-    public GameObject dragonPrefab; // Reference to the dragon prefab
-    public Transform dragonSpawnPosition; // Position to spawn the dragon
 
     private void Start()
     {
@@ -37,25 +34,23 @@ public class BirdController : MonoBehaviour
         yield return new WaitForSeconds(jumpCooldown);
         canJump = true;
     }
-
     private void PlayerLose()
     {
-        Time.timeScale = 0;
+        Time.timeScale = 0; // Stop time to end the game
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Obstacle"))
         {
-            PlayerLose();
+            PlayerLose(); // Handle game over logic when hitting an obstacle
         }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Score")) 
+        if (collision.CompareTag("Score"))
         {
-            Debug.Log("Score Triggered");
             AddScore();
         }
     }
@@ -64,12 +59,12 @@ public class BirdController : MonoBehaviour
     {
         score++;
         Debug.Log("Score: " + score);
-        
+
         if (score == 6)
         {
-            rb.velocity = Vector2.zero; 
-            rb.bodyType = RigidbodyType2D.Static; 
-            DragonSummonEvent.TriggerDragonSummon(); 
+            rb.velocity = Vector2.zero;
+            rb.bodyType = RigidbodyType2D.Static;
+            DragonSummonEvent.TriggerDragonSummon();
         }
     }
 }
